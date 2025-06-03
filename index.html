@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvolveMart: Frontend E-commerce Template</title>
+    <meta name="description" content="EvolveMart: A modern, responsive HTML, CSS, and JavaScript frontend UI Kit for e-commerce. Explore our latest collection of high-quality designs for your modern lifestyle needs.">
+    <meta name="keywords" content="EvolveMart, HTML template, CSS template, JavaScript, frontend, UI kit, e-commerce, shopping online, shop template, high-quality products, best price, fashion, electronics, home goods, accessories, flash sale, best sellers, dark mode">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "EvolveMart Frontend Template",
+      "url": "https://www.evolvemart.com/template-demo",
+      "logo": "https://www.evolvemart.com/assets/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/evolvemartofficial",
+        "https://twitter.com/evolvemartofficial",
+        "https://www.instagram.com/evolvemartofficial",
+        "https://www.linkedin.com/company/evolvemartofficial"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-123-4567",
+        "contactType": "customer service",
+        "email": "info@evolvemarttemplate.com"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.evolvemart.com/template-demo"
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght=700&family=Poppins:wght@300;400;600&display=swap"></noscript>
+
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar container">
+            <a href="#" class="logo" aria-label="EvolveMart Home">EvolveMart</a>
+            
+            <ul class="nav-links">
+                <li><a href="#hero" data-key="hero">Home</a></li>
+                <li><a href="#products" data-key="products">Products</a></li>
+                <li><a href="#categories" data-key="categories">Categories</a></li>
+                <li><a href="#flash-sale" data-key="flash-sale">Flash Sale</a></li>
+                <li><a href="#featured-products" data-key="featured-products">Best Sellers</a></li>
+                <li><a href="#keunggulan" data-key="advantages">Advantages</a></li>
+                <li><a href="#testimoni" data-key="testimonials">Testimonials</a></li>
+                <li><a href="#faq" data-key="faq">FAQ</a></li>
+                <li><a href="#kontak" data-key="contact">Contact</a></li>
+                <li><a href="#order-tracking" data-key="order-tracking">Order Tracking</a></li>
+                </ul>
+            
+            <div class="nav-icons">
+                <button class="icon-btn" id="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <button class="icon-btn" id="search-icon" aria-label="Search Products"><i class="fas fa-search" aria-hidden="true"></i></button>
+                <button class="icon-btn" id="cart-icon" aria-label="View Shopping Cart"><i class="fas fa-shopping-cart" aria-hidden="true"></i><span class="cart-count" aria-live="polite" aria-atomic="true">0</span></button>
+                <button class="icon-btn" id="wishlist-icon" aria-label="View Wishlist"><i class="fas fa-heart" aria-hidden="true"></i><span class="wishlist-count" aria-live="polite" aria-atomic="true">0</span></button>
+                <button class="icon-btn" id="profile-icon" aria-label="User Profile"><i class="fas fa-user" aria-hidden="true"></i></button>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open Mobile Menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-sidebar" id="mobile-sidebar" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu" aria-hidden="true" tabindex="-1">
+        <div class="sidebar-header">
+            <a href="#" class="logo" aria-label="EvolveMart Home">EvolveMart</a>
+            <button class="close-btn" id="close-sidebar" aria-label="Close Mobile Menu"><i class="fas fa-times" aria-hidden="true"></i></button>
+        </div>
+        <ul class="sidebar-nav-links">
+            <li><a href="#hero" data-key="hero">Home</a></li>
+            <li><a href="#products" data-key="products">Products</a></li>
+            <li><a href="#categories" data-key="categories">Categories</a></li>
+            <li><a href="#flash-sale" data-key="flash-sale">Flash Sale</a></li>
+            <li><a href="#featured-products" data-key="featured-products">Best Sellers</a></li>
+            <li><a href="#testimoni" data-key="testimonials">Testimonials</a></li>
+            <li><a href="#order-tracking" data-key="order-tracking">Order Tracking</a></li>
+            <li><a href="#keunggulan" data-key="advantages">Advantages</a></li>
+            <li><a href="#faq" data-key="faq">FAQ</a></li>
+            <li><a href="#kontak" data-key="contact">Contact</a></li>
+            <li><a href="#" data-key="shopping-help" data-info-page="shopping-help">Shopping Help</a></li>
+            <li><a href="#" data-key="how-to-order" data-info-page="how-to-order">How to Order</a></li>
+            <li><a href="#" data-key="shipping" data-info-page="shipping">Shipping</a></li>
+            <li><a href="#" data-key="terms-conditions" data-info-page="terms-conditions">Terms & Conditions</a></li>
+            <li><a href="#" data-key="returns-exchanges" data-info-page="returns-exchanges">Returns & Exchanges</a></li>
+        </ul>
+        <div class="sidebar-icons">
+            <button class="icon-btn" id="sidebar-dark-mode-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+            <button class="icon-btn" id="sidebar-search-icon" aria-label="Search Products"><i class="fas fa-search" aria-hidden="true"></i></button>
+            <button class="icon-btn" id="sidebar-cart-icon" aria-label="View Shopping Cart"><i class="fas fa-shopping-cart" aria-hidden="true"></i><span class="cart-count" aria-live="polite" aria-atomic="true">0</span></button>
+            <button class="icon-btn" id="sidebar-wishlist-icon" aria-label="View Wishlist"><i class="fas fa-heart" aria-hidden="true"></i><span class="wishlist-count" aria-live="polite" aria-atomic="true">0</span></button>
+            <button class="icon-btn" id="sidebar-profile-icon" aria-label="User Profile"><i class="fas fa-user" aria-hidden="true"></i></button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay" aria-hidden="true" tabindex="-1"></div>
+
+    <div class="notification-container" id="notification-container" aria-live="polite"></div>
+
+    <main>
+        <section class="hero-section" id="hero">
+            <div class="hero-content container">
+                <h1 data-key="hero-title">Discover Your Favorite Items!</h1>
+                <p data-key="hero-subtitle">Explore our latest collection for your modern lifestyle needs.</p>
+                <a href="#products" class="btn primary-btn" data-key="shop-now-btn">Shop Now</a>
+            </div>
+        </section>
+
+        <section class="products-section container" id="products">
+            <h2 data-key="all-products-title">All Products</h2>
+            <div class="product-filters">
+                <div class="filter-group">
+                    <label for="category-filter" data-key="category-filter-label">Category:</label>
+                    <select id="category-filter" aria-label="Filter products by category">
+                        <option value="all" data-key="filter-all">All</option>
+                        <option value="apparel" data-key="filter-pakaian">Apparel</option>
+                        <option value="accessories" data-key="filter-aksesoris">Accessories</option>
+                        <option value="electronics" data-key="filter-elektronik">Electronics</option>
+                        <option value="home-goods" data-key="filter-rumah-tangga">Home Goods</option>
+                        <option value="sports" data-key="filter-olahraga">Sports</option>
+                        <option value="books" data-key="filter-buku">Books</option>
+                        <option value="automotive" data-key="filter-otomotif">Automotive</option>
+                        <option value="decor" data-key="filter-dekorasi">Decor</option>
+                        <option value="toys" data-key="filter-mainan">Toys</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort-by" data-key="sort-by-label">Sort By:</label>
+                    <select id="sort-by" aria-label="Sort products">
+                        <option value="default" data-key="sort-default">Default</option>
+                        <option value="price-asc" data-key="sort-price-asc">Price: Low to High</option>
+                        <option value="price-desc" data-key="sort-price-desc">Price: High to Low</option>
+                        <option value="name-asc" data-key="sort-name-asc">Name: A-Z</option>
+                        <option value="name-desc" data-key="sort-name-desc">Name: Z-A</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-grid" id="product-list">
+                <div class="loading-skeleton-card"></div>
+                <div class="loading-skeleton-card"></div>
+                <div class="loading-skeleton-card"></div>
+                <div class="loading-skeleton-card"></div>
+                <div class="loading-skeleton-card"></div>
+                <div class="loading-skeleton-card"></div>
+                <div class="loading-skeleton-card"></div>
+                <div class="loading-skeleton-card"></div>
+            </div>
+            <button id="load-more-products" class="btn secondary-btn load-more-btn" aria-label="Load more products" data-key="load-more-btn" style="display: none;">Load More</button>
+        </section>
+
+        <section class="flash-sale-section container" id="flash-sale">
+            <h2 data-key="flash-sale-title">🔥 Today's Flash Sale!</h2>
+            <div class="flash-sale-timer" role="timer" aria-label="Time left for Flash Sale" data-key="time-left">
+                Time Left: <span id="countdown-timer">00h 00m 00s</span>
+            </div>
+            <div class="product-grid" id="flash-sale-list">
+                <div class="loading-skeleton-card"></div>
+                <div class="loading-skeleton-card"></div>
+                <div class="loading-skeleton-card"></div>
+            </div>
+            <button class="btn primary-btn view-all-flash-sale-btn" data-key="view-all-flash-sale-btn" aria-label="View all flash sale products">View All Flash Sale</button>
+        </section>
+
+        <section class="featured-products-section container" id="featured-products">
+            <h2 data-key="best-sellers-title">Best Sellers</h2>
+            <div class="featured-carousel product-carousel" role="region" aria-label="Best Selling Products Carousel">
+                <button class="carousel-btn prev-btn" aria-label="Previous best selling products"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                <div class="product-cards-wrapper" id="featured-product-list">
+                    <div class="loading-skeleton-card"></div>
+                    <div class="loading-skeleton-card"></div>
+                    <div class="loading-skeleton-card"></div>
+                </div>
+                <button class="carousel-btn next-btn" aria-label="Next best selling products"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+            </div>
+        </section>
+
+        <section class="categories-section container" id="categories">
+            <h2 data-key="explore-categories-title">Explore Categories</h2>
+            <div class="category-grid" id="category-grid">
+                <div class="loading-skeleton-category"></div>
+                <div class="loading-skeleton-category"></div>
+                <div class="loading-skeleton-category"></div>
+                <div class="loading-skeleton-category"></div>
+                <div class="loading-skeleton-category"></div>
+                <div class="loading-skeleton-category"></div>
+            </div>
+            <button id="view-all-categories-btn" class="btn secondary-btn load-more-btn" data-key="view-all-categories-btn" aria-label="View all product categories">View All Categories</button>
+        </section>
+
+        <section class="recently-viewed-section container" id="recently-viewed">
+            <h2 data-key="recently-viewed-title">Recently Viewed Products</h2>
+            <div class="product-grid" id="recently-viewed-list">
+                <p class="empty-message" id="empty-recently-viewed-message" data-key="empty-recently-viewed-message">No recently viewed products.</p>
+            </div>
+        </section>
+
+        <section class="why-choose-us container" id="keunggulan">
+            <h2 data-key="why-choose-us-title">Why Choose EvolveMart?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-shipping-fast" aria-hidden="true"></i>
+                    <h3 data-key="fast-delivery-title">Fast Delivery</h3>
+                    <p data-key="fast-delivery-desc">Get your items delivered lightning-fast.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-hand-holding-usd" aria-hidden="true"></i>
+                    <h3 data-key="best-price-title">Best Price</h3>
+                    <p data-key="best-price-desc">Premium quality at competitive prices.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <h3 data-key="quality-guaranteed-title">Quality Guaranteed</h3>
+                    <p data-key="quality-guaranteed-desc">Every product undergoes strict quality selection.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-headset" aria-hidden="true"></i>
+                    <h3 data-key="customer-support-title">Customer Support</h3>
+                    <p data-key="customer-support-desc">Our team is ready to assist you 24/7.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                    <h3 data-key="official-warranty-title">Official Warranty</h3>
+                    <p data-key="official-warranty-desc">All products come with a manufacturer's warranty.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-exchange-alt" aria-hidden="true"></i>
+                    <h3 data-key="easy-returns-title">Easy Returns</h3>
+                    <p data-key="easy-returns-desc">Hassle-free return process within 14 days.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tags" aria-hidden="true"></i>
+                    <h3 data-key="attractive-promos-title">Attractive Promos</h3>
+                    <p data-key="attractive-promos-desc">Discounts and special offers every week.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+                    <h3 data-key="secure-payment-title">Secure Payment</h3>
+                    <p data-key="secure-payment-desc">Encrypted and trusted payment system.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section" id="testimoni">
+            <div class="container">
+                <h2 data-key="testimonials-title">What Our Customers Say?</h2>
+                <div class="testimonial-carousel" role="region" aria-label="Customer Testimonials Carousel">
+                    <button class="carousel-btn prev-btn" aria-label="Previous testimonial"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                    <div class="testimonial-cards-wrapper" role="group" aria-live="polite" aria-atomic="true">
+                        <div class="testimonial-card">
+                            <i class="fas fa-quote-left quote-icon" aria-hidden="true"></i>
+                            <img src="assets/images/placeholder-avatar-female.jpg"
+                                 alt="Female customer avatar, Sarah Johnson"
+                                 class="customer-image"
+                                 loading="lazy"
+                                 width="80" height="80">
+                            <p>"Outstanding service and high-quality products! EvolveMart is my top choice."</p>
+                            <h4>- Sarah Johnson</h4>
+                            <span>Loyal Customer</span>
+                        </div>
+                        <div class="testimonial-card">
+                            <i class="fas fa-quote-left quote-icon" aria-hidden="true"></i>
+                            <img src="assets/images/placeholder-avatar-male.jpg"
+                                 alt="Male customer avatar, David Lee"
+                                 class="customer-image"
+                                 loading="lazy"
+                                 width="80" height="80">
+                            <p>"So easy to find what I was looking for, and the checkout process was seamless. Love it!"</p>
+                            <h4>- David Lee</h4>
+                            <span>Verified Purchase</span>
+                        </div>
+                        <div class="testimonial-card">
+                            <i class="fas fa-quote-left quote-icon" aria-hidden="true"></i>
+                            <img src="assets/images/placeholder-avatar-female-2.jpg"
+                                 alt="Female customer avatar, Emily White"
+                                 class="customer-image"
+                                 loading="lazy"
+                                 width="80" height="80">
+                            <p>"Super fast delivery and products as described. EvolveMart never disappoints!"</p>
+                            <h4>- Emily White</h4>
+                            <span>Premium Member</span>
+                        </div>
+                        <div class="testimonial-card">
+                            <i class="fas fa-quote-left quote-icon" aria-hidden="true"></i>
+                            <img src="assets/images/placeholder-avatar-female-3.jpg"
+                                 alt="Female customer avatar, Olivia Green"
+                                 class="customer-image"
+                                 loading="lazy"
+                                 width="80" height="80">
+                            <p>"Excellent customer service and innovative product selection. Will definitely shop here again!"</p>
+                            <h4>- Olivia Green</h4>
+                            <span>VIP Customer</span>
+                        </div>
+                        <div class="testimonial-card">
+                            <i class="fas fa-quote-left quote-icon" aria-hidden="true"></i>
+                            <img src="assets/images/placeholder-avatar-male-2.jpg"
+                                 alt="Male customer avatar, Michael Brown"
+                                 class="customer-image"
+                                 loading="lazy"
+                                 width="80" height="80">
+                            <p>"Durable products and very competitive prices. I'll shop here again!"</p>
+                            <h4>- Michael Brown</h4>
+                            <span>Premium Member</span>
+                        </div>
+                        <div class="testimonial-card">
+                            <i class="fas fa-quote-left quote-icon" aria-hidden="true"></i>
+                            <img src="assets/images/placeholder-avatar-female-4.jpg"
+                                 alt="Female customer avatar, Sophia Garcia"
+                                 class="customer-image"
+                                 loading="lazy"
+                                 width="80" height="80">
+                            <p>"Best online shopping experience I've ever had! Responsive and professional."</p>
+                            <h4>- Sophia Garcia</h4>
+                            <span>Gold Member</span>
+                        </div>
+                        <div class="testimonial-card">
+                            <i class="fas fa-quote-left quote-icon" aria-hidden="true"></i>
+                            <img src="assets/images/placeholder-avatar-male-3.jpg"
+                                 alt="Male customer avatar, Daniel Martinez"
+                                 class="customer-image"
+                                 loading="lazy"
+                                 width="80" height="80">
+                            <p>"Original products with official warranty. No worries about quality at EvolveMart."</p>
+                            <h4>- Daniel Martinez</h4>
+                            <span>Tech Enthusiast</span>
+                        </div>
+                        <div class="testimonial-card">
+                            <i class="fas fa-quote-left quote-icon" aria-hidden="true"></i>
+                            <img src="assets/images/placeholder-avatar-female-5.jpg"
+                                 alt="Female customer avatar, Isabella Rodriguez"
+                                 class="customer-image"
+                                 loading="lazy"
+                                 width="80" height="80">
+                            <p>"Secure and neat packaging. Items arrived in perfect condition. Thank you!"</p>
+                            <h4>- Isabella Rodriguez</h4>
+                            <span>Fashion Blogger</span>
+                        </div>
+                        <div class="testimonial-card">
+                            <i class="fas fa-quote-left quote-icon" aria-hidden="true"></i>
+                            <img src="assets/images/placeholder-avatar-male-4.jpg"
+                                 alt="Male customer avatar, James Wilson"
+                                 class="customer-image"
+                                 loading="lazy"
+                                 width="80" height="80">
+                            <p>"Special prices for members and exciting discounts. Very worth it!"</p>
+                            <h4>- James Wilson</h4>
+                            <span>Smart Shopper</span>
+                        </div>
+                        <div class="testimonial-card">
+                            <i class="fas fa-quote-left quote-icon" aria-hidden="true"></i>
+                            <img src="assets/images/placeholder-avatar-female-6.jpg"
+                                 alt="Female customer avatar, Mia Hernandez"
+                                 class="customer-image"
+                                 loading="lazy"
+                                 width="80" height="80">
+                            <p>"Friendly and helpful customer service. My issue was resolved quickly."</p>
+                            <h4>- Mia Hernandez</h4>
+                            <span>New Customer</span>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next-btn" aria-label="Next testimonial"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section container" id="faq">
+            <h2 data-key="faq-title">Frequently Asked Questions</h2>
+            <div class="accordion-container">
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq-content-1" id="faq-q-1" data-key="how-to-order-q">
+                        How to order products? <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="accordion-content" id="faq-content-1" role="region" aria-labelledby="faq-q-1">
+                        <p data-key="how-to-order-a">Select the product you want, add it to your cart, then follow the checkout steps.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq-content-2" id="faq-q-2" data-key="payment-methods-q">
+                        What payment methods are available? <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="accordion-content" id="faq-content-2" role="region" aria-labelledby="faq-q-2">
+                        <p data-key="payment-methods-a">We accept payments via bank transfer, credit/debit cards (Visa, Mastercard), and digital wallets (OVO, GoPay, Dana).</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq-content-3" id="faq-q-3" data-key="product-warranty-q">
+                        Is there a warranty for the products? <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="accordion-content" id="faq-content-3" role="region" aria-labelledby="faq-q-3">
+                        <p data-key="product-warranty-a">Yes, all our products come with a warranty according to each manufacturer\'s policy. Details can be found on the product description page.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq-content-4" id="faq-q-4" data-key="delivery-time-q">
+                        How long does delivery take? <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="accordion-content" id="faq-content-4" role="region" aria-labelledby="faq-q-4">
+                        <p data-key="delivery-time-a">Delivery time varies depending on location. Generally 2-5 business days for domestic shipping.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-section" id="newsletter">
+            <div class="container">
+                <h2 data-key="newsletter-title">Get Exclusive Offers!</h2>
+                <p data-key="newsletter-subtitle">Sign up for our newsletter and be the first to know about special promos and new products.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter Your Email" required aria-label="Email for Newsletter" data-key="email-placeholder-newsletter" maxlength="255">
+                    <button type="submit" class="btn primary-btn" data-key="subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="contact-section container" id="kontak">
+            <h2 data-key="contact-us-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-key="contact-info-title">Contact Information</h3>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 Demo Street, Cityville, Country</p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> +1 555 123 4567</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> info@example.com</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/evolvemart" target="_blank" rel="noopener noreferrer" aria-label="EvolveMart on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/evolvemart" target="_blank" rel="noopener noreferrer" aria-label="EvolveMart on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/evolvemart" target="_blank" rel="noopener noreferrer" aria-label="EvolveMart on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/company/evolvemart" target="_blank" rel="noopener noreferrer" aria-label="EvolveMart on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <h3 data-key="send-message-title">Send Us a Message</h3>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-key="full-name-label">Full Name:</label>
+                            <input type="text" id="name" name="name" required aria-required="true" aria-label="Full Name" maxlength="100" title="Enter your full name.">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-key="email-label">Email:</label>
+                            <input type="email" id="email" name="email" required aria-required="true" aria-label="Your Email" maxlength="255" title="Enter a valid email address." >
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-key="subject-label">Subject:</label>
+                            <input type="text" id="subject" name="subject" required aria-required="true" aria-label="Message Subject" maxlength="200" title="Enter the subject of your message.">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-key="message-label">Your Message:</label>
+                            <textarea id="message" name="message" rows="5" required aria-required="true" aria-label="Your Message Content" maxlength="1000" title="Write your message here."></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn" data-key="send-message-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-tracking-section container" id="order-tracking">
+            <h2 data-key="order-tracking-title">Track Your Order</h2>
+            <div class="tracking-form-container">
+                <p data-key="order-tracking-desc">Enter your order number to see the shipping status.</p>
+                <form id="order-tracking-form" class="order-tracking-form">
+                    <div class="form-group">
+                        <label for="order-id-input" data-key="order-id-label">Order Number:</label>
+                        <input type="text" id="order-id-input" required aria-required="true" placeholder="Example: ORD123456" data-key="order-id-placeholder" minlength="6" maxlength="10" pattern="^[A-Z0-9]*$" title="Order number must be alphanumeric (uppercase letters and numbers) with 6 to 10 characters.">
+                    </div>
+                    <button type="submit" class="btn primary-btn" data-key="track-order-btn">Track Order</button>
+                </form>
+                <div class="order-tracking-results" id="order-tracking-results" aria-live="polite">
+                    <p data-key="order-tracking-placeholder" id="initial-order-tracking-placeholder">Order status will appear here.</p>
+                </div>
+            </div>
+        </section>
+        </main>
+
+    <footer class="main-footer">
+        <div class="footer-container container">
+            <div class="footer-col footer-about">
+                <h3 data-key="footer-about-title">EvolveMart</h3>
+                <p data-key="footer-about-desc">Your ultimate destination for high-quality products and an unforgettable shopping experience.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/evolvemart" target="_blank" rel="noopener noreferrer" aria-label="EvolveMart on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/evolvemart" target="_blank" rel="noopener noreferrer" aria-label="EvolveMart on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/evolvemart" target="_blank" rel="noopener noreferrer" aria-label="EvolveMart on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/company/evolvemart" target="_blank" rel="noopener noreferrer" aria-label="EvolveMart on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="footer-col footer-links">
+                <h3 data-key="footer-quick-links-title">Quick Links</h3>
+                <ul>
+                    <li><a href="#hero" data-key="hero">Home</a></li>
+                    <li><a href="#products" data-key="products">Products</a></li>
+                    <li><a href="#flash-sale" data-key="flash-sale">Flash Sale</a></li>
+                    <li><a href="#featured-products" data-key="featured-products">Best Sellers</a></li>
+                    <li><a href="#categories" data-key="categories">Categories</a></li>
+                    <li><a href="#faq" data-key="faq">FAQ</a></li>
+                    <li><a href="#kontak" data-key="contact">Contact</a></li>
+                    <li><a href="#order-tracking" data-key="order-tracking">Order Tracking</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-support">
+                <h3 data-key="footer-support-title">Support</h3>
+                <ul>
+                    <li><a href="#" data-key="shopping-help" id="support-shopping-help" aria-label="Get shopping help" data-info-page="shopping-help">Shopping Help</a></li>
+                    <li><a href="#" data-key="how-to-order" id="support-how-to-order" aria-label="Learn how to order" data-info-page="how-to-order">How to Order</a></li>
+                    <li><a href="#" data-key="shipping" id="support-shipping" aria-label="Shipping information" data-info-page="shipping">Shipping</a></li>
+                    <li><a href="#" data-key="terms-conditions" id="support-terms-conditions" aria-label="Read terms and conditions" data-info-page="terms-conditions">Terms & Conditions</a></li>
+                    <li><a href="#" data-key="returns-exchanges" id="support-returns-exchanges" aria-label="Information about returns and exchanges" data-info-page="returns-exchanges">Returns & Exchanges</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-contact">
+                <h3 data-key="footer-contact-title">Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 Demo Street, Cityville, Country</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> +1 555 123 4567</p>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> info@example.com</p>
+                <div class="footer-newsletter-form-container">
+                    <p data-key="footer-newsletter-desc">Get the latest updates and special offers!</p>
+                    <form id="footer-newsletter-form" class="footer-newsletter-form">
+                        <input type="email" placeholder="Your Email" required aria-label="Email for Newsletter Footer" data-key="footer-email-placeholder" maxlength="255">
+                        <button type="submit" aria-label="Subscribe to Newsletter"><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-key="copyright">&copy; 2023 EvolveMart. All Rights Reserved.</p>
+            <div class="payment-methods" aria-label="Supported payment methods">
+                <i class="fab fa-cc-visa" role="img" aria-label="Visa"></i>
+                <i class="fab fa-cc-mastercard" role="img" aria-label="Mastercard"></i>
+                <i class="fab fa-cc-paypal" role="img" aria-label="PayPal"></i>
+                <i class="fab fa-cc-stripe" role="img" aria-label="Stripe"></i>
+                <i class="fab fa-google-pay" role="img" aria-label="Google Pay"></i>
+                <i class="fab fa-apple-pay" role="img" aria-label="Apple Pay"></i>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="search-modal" role="dialog" aria-labelledby="search-modal-title" aria-modal="true" aria-hidden="true" tabindex="-1">
+        <div class="modal-content search-modal-content">
+            <button class="close-modal-btn" aria-label="Close Search Modal"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <h3 id="search-modal-title" data-key="search-modal-title">Search Products</h3>
+            <div class="search-input-group">
+                <input type="text" id="search-input" placeholder="Type product name..." aria-label="Product Search Field" data-key="search-input-placeholder">
+                <button id="execute-search-btn" class="btn primary-btn" aria-label="Start Search"><i class="fas fa-search" aria-hidden="true"></i></button>
+            </div>
+            <div class="search-results" id="search-results">
+                <p data-key="search-results-placeholder">Search results will appear here.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="cart-modal" role="dialog" aria-labelledby="cart-modal-title" aria-modal="true" aria-hidden="true" tabindex="-1">
+        <div class="modal-content cart-modal-content">
+            <button class="close-modal-btn" aria-label="Close Shopping Cart Modal"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <h3 id="cart-modal-title" data-key="cart-modal-title">Shopping Cart <span class="cart-total-items" aria-live="polite" aria-atomic="true">0 Items</span></h3>
+            <div class="cart-items" id="cart-items">
+                <p class="empty-message" id="empty-cart-message" data-key="empty-cart-message">Your cart is empty.</p>
+            </div>
+            <div class="cart-summary" id="cart-summary">
+                <div class="summary-line">
+                    <span data-key="subtotal">Subtotal:</span>
+                    <span id="cart-subtotal">$0</span>
+                </div>
+                <div class="summary-line total">
+                    <span data-key="total">Total:</span>
+                    <span id="cart-total">$0</span>
+                </div>
+            </div>
+            <div class="cart-actions">
+                <a href="#" id="view-cart-page-btn" class="btn secondary-btn" style="display: none;" data-key="view-cart-btn" aria-label="View full shopping cart page">View Cart</a>
+                <button id="checkout-btn" class="btn primary-btn" style="display: none;" data-key="checkout-btn" aria-label="Proceed to checkout">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="wishlist-modal" role="dialog" aria-labelledby="wishlist-modal-title" aria-modal="true" aria-hidden="true" tabindex="-1">
+        <div class="modal-content wishlist-modal-content">
+            <button class="close-modal-btn" aria-label="Close Wishlist Modal"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <h3 id="wishlist-modal-title" data-key="wishlist-modal-title">Your Wishlist <span class="wishlist-total-items" aria-live="polite" aria-atomic="true">0 Items</span></h3>
+            <div class="wishlist-items" id="wishlist-items">
+                <p class="empty-message" id="empty-wishlist-message" data-key="empty-wishlist-message">Your wishlist is empty.</p>
+            </div>
+            <div class="wishlist-actions">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="info-page-modal" role="dialog" aria-labelledby="info-page-modal-title" aria-modal="true" aria-hidden="true" tabindex="-1">
+        <div class="modal-content info-page-modal-content">
+            <button class="close-modal-btn" aria-label="Close Information Page Modal"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <h3 id="info-page-modal-title" data-key="info-page-modal-title">Information</h3>
+            <div class="info-page-content" id="info-page-content">
+                <div class="loading-spinner" role="status" aria-label="Loading information..."></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal" id="product-detail-modal" role="dialog" aria-labelledby="product-detail-modal-title" aria-modal="true" aria-hidden="true" tabindex="-1">
+        <div class="modal-content product-detail-modal-content">
+            <button class="close-modal-btn" aria-label="Close Product Details Modal"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <div class="product-detail-loader loading-spinner" style="display: none;" role="status" aria-label="Loading Product Details"></div>
+            <div class="product-detail-content" id="product-detail-content" aria-live="polite">
+                </div>
+        </div>
+    </div>
+
+    <div class="modal" id="quick-view-modal" role="dialog" aria-labelledby="quick-view-modal-title" aria-modal="true" aria-hidden="true" tabindex="-1">
+        <div class="modal-content quick-view-content">
+            <button class="close-modal-btn" aria-label="Close Quick View Modal"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <h3 id="quick-view-modal-title" data-key="quick-view-title">Quick View</h3>
+            <div class="quick-view-loader loading-spinner" style="display: block;" role="status" aria-label="Loading Product Details"></div>
+            <div class="quick-view-details" style="display: none;">
+                </div>
+        </div>
+    </div>
+
+    <div class="modal" id="profile-modal" aria-labelledby="profile-modal-title" aria-modal="true" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-content profile-modal-content">
+            <button class="close-modal-btn" aria-label="Close User Profile Modal"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <h3 id="profile-modal-title" data-key="profile">User Profile</h3>
+            <div id="profile-content-area" class="profile-content-area" aria-live="polite">
+                <div class="profile-loading-skeleton loading-spinner" role="status" aria-label="Loading User Profile"></div>
+            </div>
+            <div class="profile-actions">
+                <button class="btn primary-btn" id="profile-action-btn" data-key="login-register-btn">Login / Register</button>
+                <button class="btn secondary-btn" id="view-order-history-btn" style="display: none;" data-key="my-orders-btn">View Order History</button>
+                <button class="btn secondary-btn" id="edit-profile-btn" style="display: none;" data-key="edit-profile-info-btn">Edit Profile Info</button>
+                <button class="btn secondary-btn" id="logout-btn" style="display: none;" data-key="logout-btn">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="order-detail-modal" aria-labelledby="order-detail-modal-title" aria-modal="true" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-content order-detail-modal-content">
+            <button class="close-modal-btn" aria-label="Close Order Details Modal"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <h3 id="order-detail-modal-title" data-key="order-details-title">Order Details</h3>
+            <div class="order-detail-loader loading-spinner" style="display: block;" role="status" aria-label="Loading Order Details"></div>
+            <div class="order-detail-content" id="order-detail-content" aria-live="polite" style="display: none;">
+                </div>
+        </div>
+    </div>
+
+    <div class="modal" id="edit-profile-modal" aria-labelledby="edit-profile-modal-title" aria-modal="true" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-content edit-profile-modal-content">
+            <button class="close-modal-btn" aria-label="Close Edit Profile Modal"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <h3 id="edit-profile-modal-title" data-key="edit-profile-info-btn">Edit Profile Info</h3>
+            <div id="edit-profile-form-area" class="edit-profile-form-area" aria-live="polite">
+                <div class="profile-loading-skeleton loading-spinner" role="status" aria-label="Loading Edit Profile Form"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="register-modal" aria-labelledby="register-modal-title" aria-modal="true" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-content register-modal-content">
+            <button class="close-modal-btn" aria-label="Close Register Modal"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <h3 id="register-modal-title" data-key="register-now">Register Now</h3>
+            <div id="register-form-area" class="register-form-area" aria-live="polite">
+                <div class="profile-loading-skeleton loading-spinner" role="status" aria-label="Loading Registration Form"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="checkout-page" id="checkout-page" role="dialog" aria-labelledby="checkout-page-title" aria-modal="true" aria-hidden="true" tabindex="-1">
+        <div class="checkout-header container">
+            <h2 id="checkout-page-title" data-key="checkout-page-title">Order Checkout</h2>
+            <button class="btn secondary-btn back-to-cart-btn" id="back-to-cart-btn" aria-label="Back to shopping cart" data-key="back-to-cart-btn"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Cart</button>
+        </div>
+        <div class="checkout-container container">
+            <div class="checkout-form-section">
+                <h3 data-key="shipping-info-title">Shipping Information</h3>
+                <form id="shipping-form" class="shipping-form" aria-live="polite">
+                    <div class="form-group">
+                        <label for="fullName" data-key="full-name-label-shipping">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" required aria-required="true" maxlength="100" title="Enter your full name.">
+                    </div>
+                    <div class="form-group">
+                        <label for="address" data-key="address-label">Address:</label>
+                        <input type="text" id="address" name="address" required aria-required="true" maxlength="255" title="Enter your full address.">
+                    </div>
+                    <div class="form-group">
+                        <label for="city" data-key="city-label">City:</label>
+                        <input type="text" id="city" name="city" required aria-required="true" maxlength="100" title="Enter your city.">
+                    </div>
+                    <div class="form-group">
+                        <label for="postalCode" data-key="postal-code-label">Postal Code:</label>
+                        <input type="text" id="postalCode" name="postalCode" required aria-required="true" pattern="[0-9]{5}" title="Postal code must be 5 digits.">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" data-key="phone-number-label">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required aria-required="true" pattern="^\+?[0-9\s-()]{7,20}$" title="Phone number must be between 7 to 20 digits, starting with + or a digit.">
+                    </div>
+                    <button type="submit" class="btn primary-btn" data-key="continue-to-payment-btn">Continue to Payment</button>
+                </form>
+            </div>
+            <div class="checkout-summary-section">
+                <h3 data-key="order-summary-title">Order Summary</h3>
+                <div class="checkout-order-items" id="checkout-order-items" aria-live="polite">
+                </div>
+                <div class="checkout-summary">
+                    <div class="summary-line">
+                        <span data-key="item-subtotal">Items Subtotal:</span>
+                        <span id="checkout-subtotal">$0</span>
+                    </div>
+                    <div class="summary-line">
+                        <span data-key="shipping-cost">Shipping Cost:</span>
+                        <span id="checkout-shipping-cost">$0</span>
+                    </div>
+                    <div class="summary-line total">
+                        <span data-key="total-payment">Total Payment:</span>
+                        <span id="checkout-grand-total">$0</span>
+                    </div>
+                </div>
+                <div class="payment-methods-section" id="payment-methods-section" style="display: none;" aria-live="polite">
+                    <h3 data-key="payment-methods-title">Payment Methods</h3>
+                    <div class="payment-options" role="radiogroup" aria-labelledby="payment-methods-title">
+                        <label>
+                            <input type="radio" name="paymentMethod" value="bankTransfer" checked aria-label="Bank Transfer"> <span data-key="bank-transfer">Bank Transfer</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="paymentMethod" value="creditCard" aria-label="Credit or Debit Card"> <span data-key="credit-card">Credit/Debit Card</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="paymentMethod" value="ewallet" aria-label="E-Wallet"> <span data-key="e-wallet">E-Wallet</span>
+                        </label>
+                    </div>
+                    <button id="place-order-btn" class="btn primary-btn" data-key="confirm-order-btn">Confirm Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
